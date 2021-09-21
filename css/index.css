@@ -133,9 +133,11 @@ header{
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list > li{
     position: relative;
+    
 }
 .list > li:hover:before {
     content: "";
@@ -145,6 +147,8 @@ header{
     border-radius: 2px;
     background-color: var(--style-color);
     bottom: 0px;
+    opacity: 0;
+    
 }
 .list-link:hover{
     color: var(--style-color);
@@ -163,6 +167,7 @@ header{
     font-size: 14px;
     font-weight: 500;
     margin-right: 0px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link > li:first-child{
     margin-right: 50px;
@@ -174,6 +179,8 @@ header{
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .right-link{
     display: inline-flex;
@@ -190,33 +197,14 @@ header{
     height: 12px;
     margin-right: 10px;
     fill: #757575;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-right-resize{
     width: 10px;
     height: 16px;
 }
 
-/* .right-link::before
-{
-    content:"";
-    width: 16px;
-    height: 12px;
-    background-position: center;
-    background-size: contain;
-    margin: 0px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-right: 10px;
-    background-repeat: no-repeat;
-} */
-/* .icon-mail::before {
-    background-image: url(../images/icon/envelope.svg);
-    background-repeat: no-repeat;
-}
-.icon-sm::before {
-    background-image: url(../images/icon/smartphone.svg);
-    background-repeat: no-repeat;
-} */
 
 .header-mail:hover, .header-tel:hover{
     color: var(--style-color);
@@ -264,9 +252,12 @@ header{
         background: var(--style-color);
         color: #fff;
         border-radius: 4px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
     }
     .bussines-buttom:hover{
        background: #1b7ac7;
+       
     }
     .advantages-hidden{
         position: absolute;
@@ -435,6 +426,7 @@ header{
         width: 20px;
         height: 20px;
         fill: #AFB1B8;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .iconteam-color{
         fill: #ffffff;
@@ -459,11 +451,13 @@ header{
         width:44px;
         height: 44px;
         margin-right: 10px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     }
    
     .team-icon > li:hover .icon-team {
         fill: #EEEEEE
+
     }
 
    .team-icon > li:hover{
@@ -497,10 +491,12 @@ header{
         margin-right: 30px;
         border: 1px solid #AFB1B8; 
         border-radius: 4px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
    .clients-list > li:hover .icon-clients{
        fill: var(--style-color);
+
        
    }
    .clients-list > li:hover {
@@ -522,6 +518,7 @@ header{
         width: 106px;
         height: 60px;
         fill:#AFB1B8;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
    
     /* end client */
@@ -613,6 +610,7 @@ footer{
     height: 44px;
     margin-right: 10px;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon > li:last-child{
     margin-right: 0px;
