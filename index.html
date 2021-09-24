@@ -36,7 +36,7 @@
             <section class="bussines-page">
                     <div class="container"> 
                     <h1 class="bussines-title">Эффективные решения<br> для вашего бизнеса</h1>
-                    <button data-modal-open class="bussines-buttom" type="button">Заказать услугу</button>
+                    <button data-modal-open class="bussines-buttom" type="submit">Заказать услугу</button>
                     </div>
             </section>
             
@@ -243,40 +243,49 @@
                 </button>
                 <b class="model-title">Оставьте свои данные, мы вам перезвоним</b>
                 <form class="model-form" name="modal">
-                        
                         <div class="form-field">
-                                <div class="form-layer">
-                                    <label class="label-form" for="name">Имя</label>
-                                    <div class="form-layer">
+                                <label class="label-form" for="name">Имя</label>
+                            <div class="form-layer">
                                     <input class="form-name" id="name" type="text" name="name" maxlength="50">
                                     <svg class="input-icon">
                                         <use href="/images/icon/form.svg#icon-person-form"></use>
                                     </svg>
-                                </div>
+                            </div>
                         </div>
 
                         <div class="form-field">
-                                <div class="form-layer">
-                                    <label class="label-form" for="phone">Телефон</label>
-                                    <div class="form-layer">
-                                    <input class="form-name" id="phone" type="tel" name="phone" maxlength="50">
-                                    <svg class="input-icon">
-                                        <use href="/images/icon/form.svg#icon-phone-form"></use>
-                                    </svg>
-                                </div>
+                                
+                                <label class="label-form" for="phone">Телефон</label>
+                            <div class="form-layer">
+                                <input class="form-name" id="phone" type="tel" name="phone" maxlength="16">
+                                <svg class="input-icon">
+                                    <use href="/images/icon/form.svg#icon-phone-form"></use>
+                                </svg>
+                            </div>
                         </div>
 
                         <div class="form-field">
-                            
-                                <label class="label-form" for="email">Телефон</label>
-                                <div class="form-layer">
-                                <input class="form-name" id="email" type="email" name="phone" maxlength="50">
+                                <label class="label-form" for="email">Почта</label>
+                            <div class="form-layer">
+                                <input class="form-name" id="email" name="email" type="email"  maxlength="50">
                                 <svg class="input-icon">
                                     <use href="/images/icon/form.svg#icon-email-form"></use>
                                 </svg>
                             </div>
-                    </div>
-                        
+                        </div>
+
+                        <div class="form-field">
+                            <label class="label-form" for="comment">Комментарий</label>
+                            <textarea class="form-comment" name="comment" id="comment" placeholder="Введите текст" ></textarea>
+                        </div>
+                        <div class="form-field flex-check">
+                            <input class="agreement-checkbox" type="checkbox" name="ofer" id="check" value="true">
+                            <span class="psevdo-check"></span>
+                            <label class="label-form agreement" for="check">Соглашаюсь с рассылкой и принимаю <a class="label-link" href="/">Условия договора</a></label>
+                        </div>
+
+                        <button class="form-btn" type="submit">Отправить</button>
+                    </div> 
                 </form>
             </div>
         </div>

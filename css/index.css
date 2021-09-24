@@ -2,6 +2,7 @@
     --ferst-color:#757575;
     --second-color:#212121; 
     --style-color:#2196F3;
+    --style-color-after: #1d80d1;
     --font-ferst: 'Roboto', sans-serif;
     --footer-bg: #2F303A;
 }
@@ -27,6 +28,12 @@ input, label {
     display: block;
 }
 /* открыть Модальное окно */
+    .flex-check{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .model_beckdrop{
         position:fixed;
         left: 0;
@@ -64,7 +71,7 @@ input, label {
         
     }
     .form-field{
-        margin-top: 24px;
+        margin-top: 10px;
     }
     .form-layer{
         position: relative;
@@ -86,13 +93,66 @@ input, label {
     }
     .form-name{
         padding-top:11px;
-        padding-left: 30px;
+        padding-left: 42px;
         padding-bottom: 11px;
         width: 100%;
         border:1px solid rgba(33, 33, 33, 0.2);
         box-sizing: border-box;
         border-radius: 4px;
         outline: none;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .form-comment{
+        width: 100%;
+        height: 120px;
+        outline: none;
+        border:1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 12px 16px 12px 16px;
+        resize:none;
+    }
+    .form-comment:focus-within{
+        border-color:var(--style-color);
+    }
+    .form-comment::placeholder{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+    .label-link{
+        color: var(--style-color);
+        text-decoration: underline;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+    }
+    .agreement-checkbox{
+        appearance: none;
+    }
+    .agreement{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: #757575;
+        margin: 0;
+    }
+    .agreement-checkbox:checked + .psevdo-check{
+        background-image: url(../images/icon/icon-check.svg);
+        background-position: center;
+        background-size: contain;
+    }
+    .psevdo-check{
+        display: inline-block;
+        width: 16px;
+        height: 15px; 
+        margin-right: 7px;
+        border: 2px solid #212121;
+        border-radius: 4px;
     }
     .form-name:focus{
         border: 1px solid var(--style-color);
@@ -126,15 +186,33 @@ input, label {
         
     }
     .close-x{
-        width: 11px;
-        height: 11px;
+        width: 18px;
+        height: 18px;
         fill:rgba(1, 1, 1);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .close:hover .close-x{
         fill:var(--style-color);
     }
     
-    
+    .form-btn{
+        position: absolute;
+        bottom:40px;
+        transform: translateX(-50%);
+        left:50%;
+        margin-top: 40px;
+        border: none;
+        padding: 10px 55px 10px 55px;
+        font-size: 16px;
+        background-color: var(--style-color);
+        color: #fff;
+        border-radius: 4px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .form-btn:hover{
+        background-color: var(--style-color-after);
+        cursor: pointer;
+    }
     
 /* зкрыть Модальное окно */
 .container{
@@ -306,6 +384,7 @@ header{
     .bussines-buttom{
         margin-top: 30px;
         padding: 10px 32px 10px 32px;
+        border:none;
         font-size: 16px;
         background: var(--style-color);
         color: #fff;
