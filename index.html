@@ -18,6 +18,7 @@
     <header>
         <div class="container header-page">
                     <a class="logo-link logo" href="/">Web<span class="logo-text">Studio</span></a>
+                    
                 <nav>
                     <ul class="list">
                         <li><a class="list-link action" href="index.html">Студия</a></li>
@@ -226,18 +227,61 @@
             <div class="footer-subscription">
                 <b class="social-block">Подпишитесь на рассылку</b>
                 <form class="footer-form">
-                   <input type="text" name="email" value="E-mail">
+                   <input type="text" name="email" placeholder="E-mail">
                    <button class="footer-button" type="submit">Подписаться</button>
                 </form>    
             </div>
         </div>
+        <!-- Модальное окно-->
         <div data-modal class="model_beckdrop is-hidden">
             <div class="model">
                 <button data-modal-close class="close">
+                 <svg  class="close-x" width="18px" height="18px">
+                     <use href="/images/icon/close.svg#x">
+                     </use>
+                 </svg>                  
                 </button>
+                <b class="model-title">Оставьте свои данные, мы вам перезвоним</b>
+                <form class="model-form" name="modal">
+                        
+                        <div class="form-field">
+                                <div class="form-layer">
+                                    <label class="label-form" for="name">Имя</label>
+                                    <div class="form-layer">
+                                    <input class="form-name" id="name" type="text" name="name" maxlength="50">
+                                    <svg class="input-icon">
+                                        <use href="/images/icon/form.svg#icon-person-form"></use>
+                                    </svg>
+                                </div>
+                        </div>
+
+                        <div class="form-field">
+                                <div class="form-layer">
+                                    <label class="label-form" for="phone">Телефон</label>
+                                    <div class="form-layer">
+                                    <input class="form-name" id="phone" type="tel" name="phone" maxlength="50">
+                                    <svg class="input-icon">
+                                        <use href="/images/icon/form.svg#icon-phone-form"></use>
+                                    </svg>
+                                </div>
+                        </div>
+
+                        <div class="form-field">
+                            
+                                <label class="label-form" for="email">Телефон</label>
+                                <div class="form-layer">
+                                <input class="form-name" id="email" type="email" name="phone" maxlength="50">
+                                <svg class="input-icon">
+                                    <use href="/images/icon/form.svg#icon-email-form"></use>
+                                </svg>
+                            </div>
+                    </div>
+                        
+                </form>
             </div>
         </div>
-        <script src="./js/script.js"></script>
+        <!--Конец модальное окна-->
+        <script src="./JS/script.js"></script>
     </footer>
 </body>
 

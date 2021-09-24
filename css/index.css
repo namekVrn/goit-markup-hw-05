@@ -23,6 +23,9 @@ ul{
 a{
     text-decoration: none;
 }
+input, label {
+    display: block;
+}
 /* открыть Модальное окно */
     .model_beckdrop{
         position:fixed;
@@ -30,7 +33,7 @@ a{
         top: 0;
         bottom: 0;
         right: 0;
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0,0,0,0.2);
         transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
         opacity: 1;
     }
@@ -47,21 +50,92 @@ a{
         min-width: 528px;
         min-height: 581px;
         background-color: #fff;
+        padding:40px;
         
     }
+    .model-form{
+        margin-top: 12px;
+    }
+    .model-title{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23,44px;
+        letter-spacing: 0.03em;
+        
+    }
+    .form-field{
+        margin-top: 24px;
+    }
+    .form-layer{
+        position: relative;
+    }
+    .form-layer:focus-within > .label-form,
+    .form-layer:focus-within > .input-icon{
+        color: var(--style-color);
+        fill: var(--style-color);
+    }
+
+    .label-form{
+        position: relative;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: #757575;
+        margin-bottom: 4px;
+    }
+    .form-name{
+        padding-top:11px;
+        padding-left: 30px;
+        padding-bottom: 11px;
+        width: 100%;
+        border:1px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        outline: none;
+    }
+    .form-name:focus{
+        border: 1px solid var(--style-color);
+     }
+    .form-name:focus + .input-icon{
+        fill: var(--style-color);   
+    }
+    
+    .input-icon{
+        position:absolute;
+        width:18px;
+        height: 18px;
+        left:12px;
+        top: 50%;
+        transform: translateY(-50%);
+     }
+  
     .close{
         position: absolute;
-        top:8px;
-        right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 30px;
         height: 30px;
-        border: none;
+        border: 1px solid rgba(1, 1, 1, 0.1);
+        border-radius: 50%;
+        top:8px;
         background-color: #fff;
-        background-image: url(../images/icon/close.svg);
-        background-repeat: no-repeat;
-        background-position: center;
+        right: 8px;
         cursor: pointer;
+        
     }
+    .close-x{
+        width: 11px;
+        height: 11px;
+        fill:rgba(1, 1, 1);
+    }
+    .close:hover .close-x{
+        fill:var(--style-color);
+    }
+    
+    
+    
 /* зкрыть Модальное окно */
 .container{
     width: 1200px;
@@ -71,7 +145,7 @@ a{
 }
 /* Дополнительные классы */
 
-a.action{
+.action{
     color:var(--style-color);
 }
 a.action::before{
@@ -88,23 +162,7 @@ a.bg {
     background: var(--style-color);
     color: #fff;
 }
-/* Конец - дополнительные классы */
-/* начало класса иконок */
-    /* .antenna{
-        background-image: url(/images/icon/antenna1.svg);
-    }
-    .clock{
-        background-image: url(/images/icon/clock1.svg);
-    }
-    .diagram{
-        background-image: url(/images/icon/diagram1.svg);
-    }
-    .diagram{
-        background-image: url(/images/icon/astronaut1.svg);
-    } */
 
-/* конец класса иконок */
-/* Открываю header */
 header{
     border-bottom: 1px solid #EEEEEE;
 }
@@ -128,8 +186,8 @@ header{
 }
 .list-link {
     color: var(--second-color);
-    font-size: 14px;
     font-weight: 500;
+    font-size: 14px;
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
@@ -641,6 +699,7 @@ footer{
     padding-top: 15px;
     padding-bottom: 15px;
     width: 358px;
+    padding-left: 16px;
     border-radius: 4px;
     background:#2F303A;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -651,16 +710,7 @@ footer{
     align-items: center;
     position: relative;
 }
-.footer-form > input:before{
-    content: "E-mail";
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100px;
-    color: white;
-    left: 0;
-    font-size: 16px;
-}
+
 .footer-button{
     border-radius: 4px;
     background-color: var(--style-color);
@@ -673,14 +723,21 @@ footer{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-button:hover{
+    background-color: #1867a8;
 }
 
 .footer-button:after{
     content: "";
     width: 24px;
+    display: inline-flex;
     height: 24px;
     display: block;
-    background-image: url(/images/icon/icon-telega.svg);
+    background-image: url(../images/icon/icon-telega.svg);
     background-position: center;
     background-size: cover;
     margin-left: 10px;

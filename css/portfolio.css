@@ -75,29 +75,32 @@ header{
 }
 .list-link {
     color: var(--second-color);
-    font-size: 14px;
     font-weight: 500;
+    font-size: 14px;
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.list-link:hover{
+    color: var(--style-color);
+}
 .list > li{
     position: relative;
+    
 }
 .list > li:hover:before {
     content: "";
+    position: absolute;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: var(--style-color);
-    position: absolute;
     bottom: 0px;
+    opacity: 0;
+    
 }
 
-.list-link:hover{
-    color: var(--style-color);
-}
 
 .header-link{
     display: flex;
@@ -125,6 +128,7 @@ header{
     font-size: 14px;
     font-weight: 500;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .right-link{
     display: inline-flex;
@@ -141,12 +145,14 @@ header{
     height: 12px;
     margin-right: 10px;
     fill: #757575;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-right-resize{
     width: 10px;
     height: 16px;
 }
+
 
 .header-mail:hover, .header-tel:hover{
     color: var(--style-color);
@@ -163,6 +169,7 @@ header{
 .list > li:last-child{
     margin-right: 0px;
 }
+/* Конец header */
 /* Конец header */
 
 
@@ -198,20 +205,24 @@ header{
     text-align: center;
     display: inline-block;
     padding: 6px 22px 6px 22px;
-    background: #F5F4FA;
+    background-color: #F5F4FA;
     border-radius: 4px;
     border: none;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 2503ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .action-link{
-    background: ##F5F4FA;
+    background-color: #F5F4FA;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 260ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .action-link:hover{
     color:#fff;
     background:var(--style-color);
     cursor:pointer;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    
 }
 
 .page-cards{
@@ -225,7 +236,7 @@ header{
     padding-top: 20px;
     padding-left: 24px;
     padding-right: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 20px;
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
@@ -251,6 +262,7 @@ header{
 }
 
 .boxing-img:before{
+    content: '';
     position: absolute;
     overflow: hidden;
     display: inline-block;
@@ -258,7 +270,6 @@ header{
     left: 0;
     width: 100%;
     height: 100%;
-    content: '';
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
     opacity: 0;
@@ -332,6 +343,7 @@ footer{
 }
 .flex{
     display: flex;
+    align-items: baseline;
 }
 .reset-margin{
     margin: 0;
@@ -430,19 +442,3 @@ footer{
 }
 /* Закрываю footer */
 
-.box1{
-    background-color: rgb(156, 164, 243);
-    border: 1px solid black;
-    width: 600px;
-    height: 600px;
-    position: relative;
-}
-.box2{
-    position: absolute;
-    left:50%;
-    bottom:50%;
-    background-color: #212121;
-    width: 300px;
-    height: 300px   
-    border: 1px solid red;
-}
